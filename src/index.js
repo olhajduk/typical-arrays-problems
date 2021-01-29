@@ -1,12 +1,39 @@
+exports.min = function min(array = []) {
 
-exports.min = function min (array) {
-  return 0;
+    const valZero = array.length === 0
+
+    if (valZero) {
+        return 0
+    } else {
+        const valMin = Math.min(...array)
+
+        return valMin
+    }
 }
 
-exports.max = function max (array) {
-  return 0;
+exports.max = function max(array = []) {
+
+    const valZero = array.length === 0
+
+    if (valZero) {
+        return 0
+    } else {
+        const valMax = Math.max(...array)
+
+        return valMax
+    }
 }
 
-exports.avg = function avg (array) {
-  return 0;
+exports.avg = function avg(array = []) {
+
+    const valZero = array.length === 0
+
+    if (valZero) {
+        return 0
+    } else {
+        const arraySum = array.reduce((a, b) => a + b, 0)
+        const valAvg = arraySum / array.length
+
+        return valAvg
+    }
 }
